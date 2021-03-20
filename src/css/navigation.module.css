@@ -1,0 +1,35 @@
+.navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navigation__logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.navigation__logo img {
+    height: 3rem;
+}
+
+.navigation__logo h5 {
+    font-size: 2.25rem;
+    color: white;
+}
+
+.navigation__list {
+    display: flex;
+    list-style: none;
+}
+
+.navigation__listItem {
+    margin-right: 1rem;
+}
+
+.navigation__listItem a {
+    text-decoration: none;
+    color: white;
+}
