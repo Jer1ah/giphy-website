@@ -4,7 +4,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    margin-top: .5rem;
+    margin-top: 1rem;
 }
 
 .searchBar input {
@@ -12,6 +12,14 @@
     border: none;
     height: 100%;
     text-indent: 1rem;
+    font-size: 1rem;
+    outline: none;
+}
+
+.searchBar input::placeholder {
+    font-size: 1rem;
+    letter-spacing: .1rem;
+    opacity: .75;
 }
 
 .searchBar a {
@@ -24,4 +32,8 @@
     font-size: 1.75rem;
     color: white;
     text-decoration: none;
+}
+
+.searchBar a img {
+    height: 50%;
 }
