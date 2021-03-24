@@ -20,9 +20,3 @@
     font-size: 1.25rem;
     letter-spacing: .05rem;
 }
-
-.trendingList {
-    display: flex;
-    height: 10rem;
-    margin-top: 1rem;
-}

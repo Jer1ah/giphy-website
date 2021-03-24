@@ -1,7 +1,11 @@
-.gifItem {
-    height: 100%;
+.slick-slide {
+    width: 5rem;
 }
 
-.gifItem img {
-    height: 100%;
+.slick-slide li {
+    width: 100%;
+}
+
+.slick-slide img {
+    width: 100%;
 }
