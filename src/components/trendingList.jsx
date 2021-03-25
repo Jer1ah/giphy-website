@@ -17,7 +17,9 @@ class trendingList extends Component {
                     max: 3000,
                     min: 500
                 },
-                items: 4,
+                items: 5,
+                partialVisibilityGutter: 30,
+                slidesToSlide: 3
             }
         };
 
@@ -32,6 +34,8 @@ class trendingList extends Component {
                     showDots={false}
                     containerClass={styles.trendingList}
                     itemClass={styles.trendingListItem}
+                    partialVisbile={true}
+                    infinite={true}
                 >
                     {trendingGifList}
                 </Carousel>
