@@ -13,7 +13,7 @@ class App extends Component {
     }
 
     async componentDidMount() {
-        const trendingGifs = await axios.get('http://api.giphy.com/v1/gifs/trending?api_key=ms344CewNH5NEbybHwQifMZImoQfEQ38&limit=5');
+        const trendingGifs = await axios.get('http://api.giphy.com/v1/gifs/trending?api_key=ms344CewNH5NEbybHwQifMZImoQfEQ38&limit=20');
 
         this.setState({trendingGifs: trendingGifs.data.data});
     }
