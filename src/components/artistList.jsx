@@ -1,16 +1,12 @@
-import { React, Component } from 'react';
+import React, { Component } from 'react';
 import Carousel from 'react-multi-carousel';
 import GifItem from '../components/gifItem';
-import icon from '../images/trend.svg';
+import icon from '../images/flash.svg';
+import styles from '../css/artistList.module.css';
 import 'react-multi-carousel/lib/styles.css';
-import styles from '../css/trendingList.module.css';
 
-class trendingList extends Component {
+class artistList extends Component {
     render() {
-        const trendingGifList = this.props.trendingGifs.map((gif) => {
-            return <GifItem gif={gif.images.downsized.url}/>
-        });
-
         const responsive = {
             desktop: {
                 breakpoint: {
@@ -24,7 +20,7 @@ class trendingList extends Component {
         };
 
         return (
-            <div className={styles.trending}>
+            <div className="artistList">
                 <span className={styles.heading}>
                     <img src={icon} alt="trending icon"/>
                     <h3>Trending</h3>
@@ -37,11 +33,11 @@ class trendingList extends Component {
                     partialVisbile={true}
                     infinite={true}
                 >
-                    {trendingGifList}
+                    <h2>test</h2>
                 </Carousel>
             </div>
         );
     }
-};
+}
 
-export default trendingList;
+export default artistList;

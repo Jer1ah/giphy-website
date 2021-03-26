@@ -4,6 +4,7 @@ import axios from 'axios';
 
 import Header from './header';
 import TrendingList from './trendingList';
+import ArtistList from './artistList';
 
 import styles from '../css/app.module.css';
 
@@ -23,6 +24,7 @@ class App extends Component {
             <div className={styles.app}>
                 <Header />
                 <TrendingList trendingGifs={this.state.trendingGifs}/>
+                <ArtistList />
             </div>
         );
     }
