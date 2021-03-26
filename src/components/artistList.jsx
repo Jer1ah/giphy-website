@@ -7,33 +7,37 @@ import 'react-multi-carousel/lib/styles.css';
 
 class artistList extends Component {
     render() {
+        const artistList = this.props.artistList.map((gif) => {
+            return <GifItem gif={gif.images.downsized.url}/>
+        })
+
         const responsive = {
             desktop: {
                 breakpoint: {
                     max: 3000,
                     min: 500
                 },
-                items: 5,
+                items: 3,
                 partialVisibilityGutter: 30,
-                slidesToSlide: 3
+                slidesToSlide: 1
             }
         };
 
         return (
-            <div className="artistList">
+            <div className={styles.artist}>
                 <span className={styles.heading}>
                     <img src={icon} alt="trending icon"/>
-                    <h3>Trending</h3>
+                    <h3>Artist</h3>
                 </span>
                 <Carousel 
                     responsive={responsive} 
                     showDots={false}
-                    containerClass={styles.trendingList}
-                    itemClass={styles.trendingListItem}
+                    containerClass={styles.artistList}
+                    itemClass={styles.artistListItem}
                     partialVisbile={true}
                     infinite={true}
                 >
-                    <h2>test</h2>
+                    {artistList}
                 </Carousel>
             </div>
         );
