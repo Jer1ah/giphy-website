@@ -5,13 +5,15 @@ import axios from 'axios';
 import Header from '../header/header';
 import TrendingList from '../trendingList/trendingList';
 import ArtistList from '../artistList/artistList';
+import ReactionsList from '../reactionsList/reactionsList';
 
 import styles from './app.module.css';
 
 class App extends Component {
     state = {
         trendingGifs: [],
-        artistList: []
+        artistList: [],
+        reactionsList: []
     }
 
     async componentDidMount() {
@@ -19,9 +21,12 @@ class App extends Component {
 
         const artistList = await axios.get(`http://api.giphy.com/v1/gifs/search?api_key=ms344CewNH5NEbybHwQifMZImoQfEQ38&q=artist&limit=20`);
 
+        const reactionsList = await axios.get(`http://api.giphy.com/v1/gifs/search?api_key=ms344CewNH5NEbybHwQifMZImoQfEQ38&q=reactions&limit=20`);
+
         this.setState({
             trendingGifs: trendingGifs.data.data,
-            artistList: artistList.data.data
+            artistList: artistList.data.data,
+            reactionsList: reactionsList.data.data
         });
     }
 
@@ -31,6 +36,7 @@ class App extends Component {
                 <Header />
                 <TrendingList trendingGifs={this.state.trendingGifs}/>
                 <ArtistList artistList={this.state.artistList}/>
+                <ReactionsList reactionsList={this.state.reactionsList}/>
             </div>
         );
     }

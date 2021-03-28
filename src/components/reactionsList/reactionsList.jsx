@@ -1,18 +1,30 @@
 import React from 'react';
-import Carousel from 'react-multi-carousel';
 import GifItem from '../gifItem/gifItem';
-import icon from '../images/flash.svg';
+import icon from '../../images/video-player.svg';
 import styles from './reactionsList.module.css';
-import 'react-multi-carousel/lib/styles.css';
 
 const reactionsList = (props) => {
-    const reationsList = props.reactionsList.map((gif) => {
-        return <GifItem gif={gif.images.downsized.url}/>
-    })
+    const gifList = (gifList) => {
+        return <div className="gifList">
+            <div className="mainImage">
+                <img src={gifList[0].images.downsized.url} alt="Gif"/>
+            </div>
+            <ul>
+                <li><img src={gifList[1].images.downsized.url} alt="Gif"/></li>
+                <li><img src={gifList[2].images.downsized.url} alt="Gif"/></li>
+                <li><img src={gifList[3].images.downsized.url} alt="Gif"/></li>
+                <li><img src={gifList[4].images.downsized.url} alt="Gif"/></li>
+            </ul>
+        </div>
+    };
 
     return (
-        <div className="reactionsList">
-            {reactionsList}
+        <div className={styles.reactions}>
+            <span className={styles.heading}>
+                <img src={icon} alt="trending icon"/>
+                <h3>Reactions</h3>
+            </span>
+            {props.reactionsList[0] ? gifList(props.reactionsList) : null}
         </div>
     );
 };

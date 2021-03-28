@@ -1,0 +1,22 @@
+.reactions {
+    width: 65rem;
+    margin: 2.5rem auto 1rem;
+    overflow: hidden;
+}
+
+.heading {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.heading img {
+    height: 1.35rem;
+    margin-right: .5rem;
+}
+
+.heading h3 {
+    color: white;
+    font-size: 1.25rem;
+    letter-spacing: .05rem;
+}
