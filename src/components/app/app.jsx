@@ -6,6 +6,7 @@ import Header from '../header/header';
 import TrendingList from '../trendingList/trendingList';
 import ArtistList from '../artistList/artistList';
 import ReactionsList from '../reactionsList/reactionsList';
+import Footer from '../footer/footer';
 
 import styles from './app.module.css';
 
@@ -21,7 +22,7 @@ class App extends Component {
 
         const artistList = await axios.get(`http://api.giphy.com/v1/gifs/search?api_key=ms344CewNH5NEbybHwQifMZImoQfEQ38&q=artist&limit=20`);
 
-        const reactionsList = await axios.get(`http://api.giphy.com/v1/gifs/search?api_key=ms344CewNH5NEbybHwQifMZImoQfEQ38&q=reactions&limit=20`);
+        const reactionsList = await axios.get(`http://api.giphy.com/v1/gifs/search?api_key=ms344CewNH5NEbybHwQifMZImoQfEQ38&q=reactions&limit=10`);
 
         this.setState({
             trendingGifs: trendingGifs.data.data,
@@ -37,6 +38,7 @@ class App extends Component {
                 <TrendingList trendingGifs={this.state.trendingGifs}/>
                 <ArtistList artistList={this.state.artistList}/>
                 <ReactionsList reactionsList={this.state.reactionsList}/>
+                <Footer />
             </div>
         );
     }

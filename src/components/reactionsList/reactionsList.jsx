@@ -5,15 +5,23 @@ import styles from './reactionsList.module.css';
 
 const reactionsList = (props) => {
     const gifList = (gifList) => {
-        return <div className="gifList">
-            <div className="mainImage">
+        return <div className={styles.container}>
+            <div className={styles.mainGif}>
                 <img src={gifList[0].images.downsized.url} alt="Gif"/>
             </div>
-            <ul>
-                <li><img src={gifList[1].images.downsized.url} alt="Gif"/></li>
-                <li><img src={gifList[2].images.downsized.url} alt="Gif"/></li>
-                <li><img src={gifList[3].images.downsized.url} alt="Gif"/></li>
-                <li><img src={gifList[4].images.downsized.url} alt="Gif"/></li>
+            <ul className={styles.gifList}>
+                <li className={styles.gifListItem}>
+                    <img src={gifList[1].images.downsized.url} alt="Gif"/>
+                </li>
+                <li className={styles.gifListItem}>
+                    <img src={gifList[2].images.downsized.url} alt="Gif"/>
+                </li>
+                <li className={styles.gifListItem}>
+                    <img src={gifList[3].images.downsized.url} alt="Gif"/>
+                </li>
+                <li className={styles.gifListItem}>
+                    <img src={gifList[4].images.downsized.url} alt="Gif"/>
+                </li>
             </ul>
         </div>
     };
