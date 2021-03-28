@@ -1,8 +1,8 @@
 import React from 'react';
 
-import styles from '../css/searchBar.module.css';
+import styles from './searchBar.module.css';
 
-import searchIcon from '../images/search.svg';
+import searchIcon from '../../images/search.svg';
 
 const searchBar = () => {
     return (

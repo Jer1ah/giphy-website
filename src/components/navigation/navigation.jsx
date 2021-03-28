@@ -1,9 +1,9 @@
 import React from 'react';
 
-import giphyLogo from '../images/giphy-logo.png';
-import userIcon from '../images/user.svg';
+import giphyLogo from '../../images/giphy-logo.png';
+import userIcon from '../../images/user.svg';
 
-import styles from '../css/navigation.module.css';
+import styles from './navigation.module.css';
 
 const Navigation = () => {
     return (

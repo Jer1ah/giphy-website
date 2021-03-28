@@ -1,9 +1,9 @@
 import { React, Component } from 'react';
 import Carousel from 'react-multi-carousel';
-import GifItem from '../components/gifItem';
-import icon from '../images/trend.svg';
+import GifItem from '../gifItem/gifItem';
+import icon from '../../images/trend.svg';
 import 'react-multi-carousel/lib/styles.css';
-import styles from '../css/trendingList.module.css';
+import styles from './trendingList.module.css';
 
 class trendingList extends Component {
     render() {

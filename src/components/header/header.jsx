@@ -1,9 +1,9 @@
 import {React, Component} from 'react';
 
-import Navigation from './navigation';
-import SearchBar from './searchBar';
+import Navigation from '../navigation/navigation';
+import SearchBar from '../searchBar/searchBar';
 
-import styles from '../css/header.module.css';
+import styles from './header.module.css';
 
 class Header extends Component {
     render() {

@@ -2,11 +2,11 @@ import { React, Component } from 'react';
 
 import axios from 'axios';
 
-import Header from './header';
-import TrendingList from './trendingList';
-import ArtistList from './artistList';
+import Header from '../header/header';
+import TrendingList from '../trendingList/trendingList';
+import ArtistList from '../artistList/artistList';
 
-import styles from '../css/app.module.css';
+import styles from './app.module.css';
 
 class App extends Component {
     state = {

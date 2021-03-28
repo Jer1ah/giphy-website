@@ -1,6 +1,6 @@
 import React from 'react';
 
-import '../css/gifItem.module.css';
+import './gifItem.module.css';
 
 const gifItem = ({ gif }) => {
     return (
