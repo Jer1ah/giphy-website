@@ -2,12 +2,23 @@ import { React, Component } from 'react';
 import Carousel from 'react-multi-carousel';
 import GifItem from '../gifItem/gifItem';
 import icon from '../../images/trend.svg';
+import axios from 'axios';
 import 'react-multi-carousel/lib/styles.css';
 import styles from './trendingList.module.css';
 
 class trendingList extends Component {
+    state={
+        list: []
+    }
+
+    async componentDidMount() {
+        const trendingGifs = await axios.get('http://api.giphy.com/v1/gifs/trending?api_key=ms344CewNH5NEbybHwQifMZImoQfEQ38&limit=20');
+
+        this.setState({ list: trendingGifs.data.data });
+    }
+
     render() {
-        const trendingGifList = this.props.trendingGifs.map((gif) => {
+        const trendingGifList = this.state.list.map((gif) => {
             return <GifItem gif={gif.images.downsized.url}/>
         });
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import giphyLogo from '../../images/giphy-logo.png';
 import userIcon from '../../images/user.svg';
@@ -14,10 +15,10 @@ const Navigation = () => {
             </a>
             <ul className={styles.navigation__list}>
                 <li className={styles.navigation__listItem}>
-                    <a href="#">Reactions</a>
+                    <Link to="/reactions">Reactions</Link>
                 </li>
                 <li className={styles.navigation__listItem}>
-                    <a href="#">Entertainment</a>
+                    <Link to="/entertainment">Entertainment</Link>
                 </li>
                 <li className={styles.navigation__listItem}>
                     <a href="#">Sports</a>
@@ -36,10 +37,10 @@ const Navigation = () => {
                 <a href="#" className={styles.uploadButton}>Upload</a>
                 <a href="#" className={styles.createButton}>Create</a>
             </div> 
-            <a href="#" className={styles.logInButton}>
+            <Link to="/login" className={styles.logInButton}>
                 <span><img src={userIcon} alt="User icon"/></span>
                 <h5>Log In</h5>
-            </a>
+            </Link>
         </nav>
     );
 };

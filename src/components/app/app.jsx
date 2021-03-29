@@ -1,47 +1,22 @@
-import { React, Component } from 'react';
-
-import axios from 'axios';
-
-import Header from '../header/header';
-import TrendingList from '../trendingList/trendingList';
-import ArtistList from '../artistList/artistList';
-import ReactionsList from '../reactionsList/reactionsList';
-import Footer from '../footer/footer';
-
+import React from 'react';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route
+} from 'react-router-dom';
+import HomePage from '../homePage/homePage';
+import loginPage from '../loginPage/loginPage';
 import styles from './app.module.css';
 
-class App extends Component {
-    state = {
-        trendingGifs: [],
-        artistList: [],
-        reactionsList: []
-    }
-
-    async componentDidMount() {
-        const trendingGifs = await axios.get('http://api.giphy.com/v1/gifs/trending?api_key=ms344CewNH5NEbybHwQifMZImoQfEQ38&limit=20');
-
-        const artistList = await axios.get(`http://api.giphy.com/v1/gifs/search?api_key=ms344CewNH5NEbybHwQifMZImoQfEQ38&q=artist&limit=20`);
-
-        const reactionsList = await axios.get(`http://api.giphy.com/v1/gifs/search?api_key=ms344CewNH5NEbybHwQifMZImoQfEQ38&q=reactions&limit=10`);
-
-        this.setState({
-            trendingGifs: trendingGifs.data.data,
-            artistList: artistList.data.data,
-            reactionsList: reactionsList.data.data
-        });
-    }
-
-    render() {
-        return (
-            <div className={styles.app}>
-                <Header />
-                <TrendingList trendingGifs={this.state.trendingGifs}/>
-                <ArtistList artistList={this.state.artistList}/>
-                <ReactionsList reactionsList={this.state.reactionsList}/>
-                <Footer />
-            </div>
-        );
-    }
+const App = () => {
+    return (
+        <Router>
+            <Switch className={styles.app}>
+                <Route exact path="/" component={HomePage}/>
+                <Route exact path="/login" component={loginPage}/>
+            </Switch>
+        </Router>
+    );
 };
 
 export default App;
