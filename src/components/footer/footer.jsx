@@ -5,7 +5,7 @@ import icon from '../../images/upload.svg';
 const footer = () => {
     return (
         <div className={styles.footer}>
-            <a href="#" className={styles.container}>
+            <a href="#top" className={styles.container}>
                 <img src={icon} alt="Up Arrow"/>
                 <h5>Back to Top</h5>
             </a>

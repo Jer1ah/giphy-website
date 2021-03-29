@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import giphyIcon from '../../images/giphy-logo.png';
 import facebookIcon from '../../images/facebook.svg';
 import appleIcon from '../../images/apple.svg';
+import returnIcon from '../../images/reload.svg';
 import styles from './loginPage.module.css';
 
 const loginPage = () => {
@@ -27,11 +28,15 @@ const loginPage = () => {
                     <img src={appleIcon} alt="Apple Icon"/>
                     <span>Login with Apple</span>
                 </a>
-                <span>Or</span>
+                <span className={styles.or}>Or</span>
                 <input type="text" placeholder="Email Address"/>
                 <input type="password" placeholder="Password"/>
                 <button className={styles.submitButton}>Log In</button>
             </form>
+            <Link exact to="/" className={styles.returnButton}>
+                <img src={returnIcon} alt="Return Icon"/>
+                <span>Return to Homepage</span>
+            </Link>
         </div>
     );
 };
