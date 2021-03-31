@@ -1,26 +1,21 @@
 import React, { Component } from 'react';
 import Carousel from 'react-multi-carousel';
+import { connect } from 'react-redux';
+import { getArtistGifs } from '../../actions';
 import GifItem from '../gifItem/gifItem';
-import axios from 'axios';
 import icon from '../../images/flash.svg';
 import styles from './artistList.module.css';
 import 'react-multi-carousel/lib/styles.css';
 
 class artistList extends Component {
-    state = {
-        list: []
-    }
-
-    async componentDidMount() {
-        const artistList = await axios.get(`http://api.giphy.com/v1/gifs/search?api_key=ms344CewNH5NEbybHwQifMZImoQfEQ38&q=artist&limit=20`);
-
-        this.setState({ list: artistList.data.data });
+    componentDidMount() {
+        this.props.getArtistGifs();
     }
 
     render() {
-        const artistList = this.state.list.map((gif) => {
+        const artistGifList = this.props.artistGifs.map((gif) => {
             return <GifItem gif={gif.images.downsized.url}/>
-        })
+        });
 
         const responsive = {
             desktop: {
@@ -48,11 +43,19 @@ class artistList extends Component {
                     partialVisbile={true}
                     infinite={true}
                 >
-                    {artistList}
+                    {artistGifList}
                 </Carousel>
             </div>
         );
     }
 }
 
-export default artistList;
+const mapStateToProps = (state) => {
+    return {
+        artistGifs: state.artistGifs
+    };
+};
+
+export default connect(mapStateToProps, {
+    getArtistGifs
+})(artistList);

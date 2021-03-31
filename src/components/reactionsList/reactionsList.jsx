@@ -1,18 +1,14 @@
 import React, { Component } from 'react';
 import GifItem from '../gifItem/gifItem';
+import { connect } from 'react-redux';
+import { getReactionsGifs } from '../../actions';
 import axios from 'axios';
 import icon from '../../images/video-player.svg';
 import styles from './reactionsList.module.css';
 
 class reactionsList extends Component {
-    state = {
-        list: []
-    }
-
-    async componentDidMount() {
-        const reactionsList = await axios.get(`http://api.giphy.com/v1/gifs/search?api_key=ms344CewNH5NEbybHwQifMZImoQfEQ38&q=reactions&limit=5`);
-
-        this.setState({ list: reactionsList.data.data });
+    componentDidMount() {
+        this.props.getReactionsGifs();
     }
 
     render() {
@@ -44,10 +40,18 @@ class reactionsList extends Component {
                     <img src={icon} alt="trending icon"/>
                     <h3>Reactions</h3>
                 </span>
-                {this.state.list[0] ? gifList(this.state.list) : null}
+                {this.props.reactionsGifs[0] ? gifList(this.props.reactionsGifs) : null}
             </div>
         );
     }
 };
 
-export default reactionsList
+const mapStateToProps = (state) => {
+    return {
+        reactionsGifs: state.reactionsGifs
+    };
+};
+
+export default connect(mapStateToProps, {
+    getReactionsGifs
+})(reactionsList)
