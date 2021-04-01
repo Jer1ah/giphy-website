@@ -21,7 +21,7 @@ const artistGifs = (state=[], action) => {
 
 const reactionsGifs = (state=[], action) => {
     switch(action.type) {
-        case 'GET_ENTERTAINMENT_LIST':
+        case 'GET_REACTIONS_LIST':
             return [...action.payload]
         default:
             return state;

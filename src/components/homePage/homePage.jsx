@@ -6,7 +6,7 @@ import ArtistList from '../artistList/artistList';
 import ReactionsList from '../reactionsList/reactionsList';
 import Footer from '../footer/footer';
 
-const home = () => {
+const homePage = () => {
     return (
         <div className="home">
             <Header />
@@ -18,4 +18,4 @@ const home = () => {
     );
 };
 
-export default home;
+export default homePage;
