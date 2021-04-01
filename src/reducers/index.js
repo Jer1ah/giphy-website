@@ -28,8 +28,18 @@ const reactionsGifs = (state=[], action) => {
     }
 };
 
+const searchedGifs = (state=[], action) => {
+    switch(action.type) {
+        case 'GET_SEARCHED_GIFS':
+            return [...action.payload];
+        default:
+            return state;
+    }
+};
+
 export default combineReducers({
     trendingGifs: trendingGifs,
     artistGifs: artistGifs,
-    reactionsGifs: reactionsGifs
+    reactionsGifs: reactionsGifs,
+    searchedGifs: searchedGifs
 });

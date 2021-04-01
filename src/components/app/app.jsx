@@ -4,8 +4,9 @@ import {
     Switch,
     Route
 } from 'react-router-dom';
-import HomePage from '../homePage/homePage';
-import loginPage from '../loginPage/loginPage';
+import HomePage from '../pages/homePage/homePage';
+import LoginPage from '../pages/loginPage/loginPage'
+import SearchPage from '../pages/searchPage/searchPage';
 import styles from './app.module.css';
 
 const App = () => {
@@ -13,7 +14,8 @@ const App = () => {
         <Router>
             <Switch className={styles.app}>
                 <Route exact path="/" component={HomePage}/>
-                <Route exact path="/login" component={loginPage}/>
+                <Route exact path="/login" component={LoginPage}/>
+                <Route exact path="/search" component={SearchPage}/>
             </Switch>
         </Router>
     );

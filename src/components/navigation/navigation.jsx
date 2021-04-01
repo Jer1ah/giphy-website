@@ -9,10 +9,10 @@ import styles from './navigation.module.css';
 const Navigation = () => {
     return (
         <nav className={styles.navigation}>
-            <a href="#" className={styles.logo}>
+            <Link to="/" className={styles.logo}>
                 <img src={giphyLogo} alt="Giphy logo"/>
                 <h5>GIPHY</h5>
-            </a>
+            </Link>
             <ul className={styles.navigation__list}>
                 <li className={styles.navigation__listItem}>
                     <Link to="/reactions">Reactions</Link>

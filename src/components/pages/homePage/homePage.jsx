@@ -4,13 +4,13 @@ import {
     getTrendingGifs,
     getArtistGifs,
     getReactionsGifs
-} from '../../actions';
+} from '../../../actions';
 
-import Header from '../header/header';
-import TrendingList from '../trendingList/trendingList';
-import ArtistList from '../artistList/artistList';
-import ReactionsList from '../reactionsList/reactionsList';
-import Footer from '../footer/footer';
+import Header from '../../header/header';
+import TrendingList from '../../trendingList/trendingList';
+import ArtistList from '../../artistList/artistList';
+import ReactionsList from '../../reactionsList/reactionsList';
+import Footer from '../../footer/footer';
 
 class homePage extends Component {
     componentDidMount() {

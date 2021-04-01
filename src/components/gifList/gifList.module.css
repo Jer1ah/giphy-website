@@ -1,0 +1,15 @@
+.gifList {
+    width: 65rem;
+    margin: 0 auto;
+    column-count: 4;
+}
+
+.gifList li {
+    margin-bottom: .5rem;
+    overflow: hidden;
+    border-radius: .25rem;
+}
+
+.gifList li img {
+    width: 100%;
+}

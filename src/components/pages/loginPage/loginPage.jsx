@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import giphyIcon from '../../images/giphy-logo.png';
-import facebookIcon from '../../images/facebook.svg';
-import appleIcon from '../../images/apple.svg';
-import returnIcon from '../../images/reload.svg';
+import giphyIcon from '../../../images/giphy-logo.png';
+import facebookIcon from '../../../images/facebook.svg';
+import appleIcon from '../../../images/apple.svg';
+import returnIcon from '../../../images/reload.svg';
 import styles from './loginPage.module.css';
 
 const loginPage = () => {
