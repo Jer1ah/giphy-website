@@ -16,26 +16,32 @@ const Navigation = () => {
             <ul className={styles.navigation__list}>
                 <li className={styles.navigation__listItem}>
                     <Link to="/reactions">Reactions</Link>
+                    <div className={styles.background}></div>
                 </li>
                 <li className={styles.navigation__listItem}>
                     <Link to="/entertainment">Entertainment</Link>
+                    <div className={styles.background}></div>
                 </li>
                 <li className={styles.navigation__listItem}>
-                    <a href="#">Sports</a>
+                    <Link to="/sports">Sports</Link>
+                    <div className={styles.background}></div>
                 </li>
                 <li className={styles.navigation__listItem}>
-                    <a href="#">Stickers</a>
+                    <Link to="/stickers">Stickers</Link>
+                    <div className={styles.background}></div>
                 </li>
                 <li className={styles.navigation__listItem}>
-                    <a href="#">Artist</a>
+                    <Link to="/artist">Artist</Link>
+                    <div className={styles.background}></div>
                 </li>
                 <li className={styles.navigation__listItem}>
-                    <a href="#">:</a>
+                    <Link to="/artist">:</Link>
+                    <div className={styles.background}></div>
                 </li>
             </ul>
             <div className={styles.contentWrapper}>
-                <a href="#" className={styles.uploadButton}>Upload</a>
-                <a href="#" className={styles.createButton}>Create</a>
+                <Link to="/upload" className={styles.uploadButton}>Upload</Link>
+                <Link to="/create" className={styles.createButton}>Create</Link>
             </div> 
             <Link to="/login" className={styles.logInButton}>
                 <span><img src={userIcon} alt="User icon"/></span>

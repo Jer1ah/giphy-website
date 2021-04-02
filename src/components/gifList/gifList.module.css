@@ -4,12 +4,8 @@
     column-count: 4;
 }
 
-.gifList li {
-    margin-bottom: .5rem;
-    overflow: hidden;
-    border-radius: .25rem;
-}
-
-.gifList li img {
+.gifList img {
     width: 100%;
+    margin-bottom: .5rem;
+    border-radius: .25rem;
 }

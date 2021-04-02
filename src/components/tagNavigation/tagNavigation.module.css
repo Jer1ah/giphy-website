@@ -22,6 +22,10 @@
     letter-spacing: .05rem;
 }
 
+.gifsButton:hover, .stickersButton:hover {
+    cursor: pointer;
+}
+
 .gifsButton {
     margin-right: 1rem;
 }

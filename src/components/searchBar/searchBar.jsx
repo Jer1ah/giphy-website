@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { getSearchedGifs } from '../../actions';
+import { 
+    getSearchedGifs,
+    updateSearchTerm
+} from '../../actions';
 
 import styles from './searchBar.module.css';
 
@@ -13,19 +16,35 @@ class searchBar extends Component {
         this.searchBar = React.createRef();
     }
 
+    onSearch = () => {
+        this.props.updateSearchTerm(this.searchBar.current.value);
+        this.props.getSearchedGifs(this.searchBar.current.value);
+        this.searchBar.current.value = '';
+    }
+
     render() {
         return (
             <div className={styles.searchBar}>
                 <input type="text" placeholder="Search all GIF's and Stickers" ref={this.searchBar}/>
                 <Link 
                     to="/search"
-                    onClick={() => this.props.getSearchedGifs(this.searchBar.current.value)}
-                ><img src={searchIcon} alt="Search icon"/></Link>
+                    onClick={this.onSearch}
+                >
+                    <img src={searchIcon} alt="Search icon"/>
+                </Link>
             </div>
         );
     }
 };
 
-export default connect(null, {
-    getSearchedGifs
+const mapStateToProps = (state) => {
+    return {
+        searchTerm: state.searchTerm,
+        gifList: state.searchedGifs
+    };
+}
+
+export default connect(mapStateToProps, {
+    getSearchedGifs,
+    updateSearchTerm
 })(searchBar);

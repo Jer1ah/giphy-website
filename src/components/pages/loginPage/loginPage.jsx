@@ -19,12 +19,12 @@ const loginPage = () => {
             <video autoPlay muted loop>
                 <source src="https://media.giphy.com/login-join-backgrounds/science-lab.mp4" type="video/mp4"/>
             </video>
-            <form action="#" className={styles.form}>
-                <a href="#" className={styles.facebookLogin}>
+            <form className={styles.form}>
+                <a href="#facebook" className={styles.facebookLogin}>
                     <img src={facebookIcon} alt="Facebook Icon"/>
                     <span>Login with Facebook</span>
                 </a>
-                <a href="#" className={styles.appleLogin}>
+                <a href="#apple" className={styles.appleLogin}>
                     <img src={appleIcon} alt="Apple Icon"/>
                     <span>Login with Apple</span>
                 </a>

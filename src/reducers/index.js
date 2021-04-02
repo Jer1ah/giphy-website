@@ -1,4 +1,3 @@
-import { faSatellite } from '@fortawesome/free-solid-svg-icons';
 import { combineReducers } from 'redux';
 
 const trendingGifs = (state=[], action) => {
@@ -37,9 +36,19 @@ const searchedGifs = (state=[], action) => {
     }
 };
 
+const searchTerm = (state='', action) => {
+    switch(action.type) {
+        case 'GET_SEARCH_TERM':
+            return action.payload;
+        default:
+            return state;
+    }
+};
+
 export default combineReducers({
     trendingGifs: trendingGifs,
     artistGifs: artistGifs,
     reactionsGifs: reactionsGifs,
-    searchedGifs: searchedGifs
+    searchedGifs: searchedGifs,
+    searchTerm: searchTerm
 });

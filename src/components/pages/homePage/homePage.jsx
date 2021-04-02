@@ -32,7 +32,13 @@ class homePage extends Component {
     }
 };
 
-export default connect(null, {
+const mapStateToProps = (state) => {
+    return {
+        searchTerm: state.searchTerm
+    };
+};
+
+export default connect(mapStateToProps, {
     getTrendingGifs,
     getReactionsGifs,
     getArtistGifs

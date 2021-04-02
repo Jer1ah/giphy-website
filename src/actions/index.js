@@ -27,3 +27,10 @@ export const getSearchedGifs = (searchTerm) => {
         dispatch({ type: 'GET_SEARCHED_GIFS', payload: gifList.data.data });
     }
 };
+
+export const updateSearchTerm = (term) => {
+    return {
+        type: 'GET_SEARCH_TERM',
+        payload: term
+    }
+};

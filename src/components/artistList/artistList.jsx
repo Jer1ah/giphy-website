@@ -8,7 +8,7 @@ import 'react-multi-carousel/lib/styles.css';
 
 const artistList = (props) => {
     const artistGifList = props.artistGifs.map((gif) => {
-        return <GifItem gif={gif.images.downsized.url}/>
+        return <GifItem gif={gif.images.downsized.url} key={gif.id}/>
     });
 
     const responsive = {
@@ -18,7 +18,6 @@ const artistList = (props) => {
                 min: 500
             },
             items: 3,
-            partialVisibilityGutter: 30,
             slidesToSlide: 1
         }
     };
@@ -34,7 +33,6 @@ const artistList = (props) => {
                 showDots={false}
                 containerClass={styles.artistList}
                 itemClass={styles.artistListItem}
-                partialVisbile={true}
                 infinite={true}
             >
                 {artistGifList}

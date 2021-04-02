@@ -8,7 +8,7 @@ import styles from './trendingList.module.css';
 
 const trendingList = (props) => {
     const trendingGifList = props.trendingGifs.map((gif) => {
-        return <GifItem gif={gif.images.downsized.url}/>
+        return <GifItem gif={gif.images.downsized.url} key={gif.id}/>
     });
 
     const responsive = {
@@ -18,7 +18,6 @@ const trendingList = (props) => {
                 min: 500
             },
             items: 5,
-            partialVisibilityGutter: 30,
             slidesToSlide: 3
         }
     };
@@ -34,7 +33,6 @@ const trendingList = (props) => {
                 showDots={false}
                 containerClass={styles.trendingList}
                 itemClass={styles.trendingListItem}
-                partialVisbile={true}
                 infinite={true}
             >
                 {trendingGifList}
