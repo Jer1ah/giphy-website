@@ -35,6 +35,13 @@ export const getGifList = (searchTerm) => {
     }
 };
 
+export const getTrendingStickers = () => {
+    return async (dispatch) => {
+        const gifList = await axios.get(`http://api.giphy.com/v1/stickers/trending?api_key=ms344CewNH5NEbybHwQifMZImoQfEQ38&limit=21`);
+        dispatch({ type: 'GET_TRENDING_STICKERS', payload: gifList.data.data });
+    }
+};
+
 export const updateSearchTerm = (term) => {
     return {
         type: 'GET_SEARCH_TERM',

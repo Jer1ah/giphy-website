@@ -1,5 +1,6 @@
 .trending {
     width: 65rem;
+    max-width: 95%;
     margin: 1.5rem auto 1rem;
     overflow: hidden;
 }

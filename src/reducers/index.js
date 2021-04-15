@@ -45,6 +45,15 @@ const gifList = (state=[], action) => {
     }
 };
 
+const trendingStickers = (state=[], action) => {
+    switch(action.type) {
+        case 'GET_TRENDING_STICKERS':
+            return [...action.payload];
+        default:
+            return state;
+    }
+};
+
 const searchTerm = (state='', action) => {
     switch(action.type) {
         case 'GET_SEARCH_TERM':
@@ -69,6 +78,7 @@ export default combineReducers({
     reactionsGifs: reactionsGifs,
     searchedGifs: searchedGifs,
     gifList: gifList,
+    trendingStickers: trendingStickers,
     searchTerm: searchTerm,
     gifTitle: gifTitle
 });

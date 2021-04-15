@@ -1,5 +1,6 @@
 .reactions {
     width: 65rem;
+    max-width: 95%;
     margin: 2.5rem auto 1rem;
     overflow: hidden;
 }
