@@ -7,6 +7,7 @@ import {
 import HomePage from '../pages/homePage/homePage';
 import LoginPage from '../pages/loginPage/loginPage'
 import SearchPage from '../pages/searchPage/searchPage';
+import GifListPage from '../pages/gifListPage/gifListPage';
 import styles from './app.module.css';
 
 const App = () => {
@@ -16,6 +17,7 @@ const App = () => {
                 <Route exact path="/" component={HomePage}/>
                 <Route exact path="/login" component={LoginPage}/>
                 <Route exact path="/search" component={SearchPage}/>
+                <Route exact path="/giflist" component={GifListPage}/>
             </Switch>
         </Router>
     );

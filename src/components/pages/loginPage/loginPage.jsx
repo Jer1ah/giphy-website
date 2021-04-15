@@ -7,6 +7,11 @@ import returnIcon from '../../../images/reload.svg';
 import styles from './loginPage.module.css';
 
 const loginPage = () => {
+    const onButtonClick = (event) => {
+        event.preventDefault();
+
+    };
+
     return (
         <div className={styles.loginPage}>
             <Link exact to="/" className={styles.heading}>
@@ -31,7 +36,10 @@ const loginPage = () => {
                 <span className={styles.or}>Or</span>
                 <input type="text" placeholder="Email Address"/>
                 <input type="password" placeholder="Password"/>
-                <button className={styles.submitButton}>Log In</button>
+                <button 
+                    className={styles.submitButton} 
+                    onClick={onButtonClick}
+                >Log In</button>
             </form>
             <Link exact to="/" className={styles.returnButton}>
                 <img src={returnIcon} alt="Return Icon"/>

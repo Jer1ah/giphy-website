@@ -15,15 +15,15 @@ const Navigation = () => {
             </Link>
             <ul className={styles.navigation__list}>
                 <li className={styles.navigation__listItem}>
-                    <Link to="/reactions">Reactions</Link>
+                    <Link to="/giflist">Reactions</Link>
                     <div className={styles.background}></div>
                 </li>
                 <li className={styles.navigation__listItem}>
-                    <Link to="/entertainment">Entertainment</Link>
+                    <Link to="/giflist">Entertainment</Link>
                     <div className={styles.background}></div>
                 </li>
                 <li className={styles.navigation__listItem}>
-                    <Link to="/sports">Sports</Link>
+                    <Link to="/giflist">Sports</Link>
                     <div className={styles.background}></div>
                 </li>
                 <li className={styles.navigation__listItem}>
@@ -31,7 +31,7 @@ const Navigation = () => {
                     <div className={styles.background}></div>
                 </li>
                 <li className={styles.navigation__listItem}>
-                    <Link to="/artist">Artist</Link>
+                    <Link to="/giflist">Artist</Link>
                     <div className={styles.background}></div>
                 </li>
                 <li className={styles.navigation__listItem}>
@@ -40,8 +40,8 @@ const Navigation = () => {
                 </li>
             </ul>
             <div className={styles.contentWrapper}>
-                <Link to="/upload" className={styles.uploadButton}>Upload</Link>
-                <Link to="/create" className={styles.createButton}>Create</Link>
+                <a href="https://giphy.com/create/gifmaker" target="_blank" className={styles.uploadButton}>Upload</a>
+                <a href="https://giphy.com/upload" target="_blank" className={styles.createButton}>Create</a>
             </div> 
             <Link to="/login" className={styles.logInButton}>
                 <span><img src={userIcon} alt="User icon"/></span>
