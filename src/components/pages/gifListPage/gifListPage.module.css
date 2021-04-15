@@ -6,5 +6,16 @@
 .title  {
     color: white;
     font-size: 2rem;
-    margin-top: 1rem;
+    margin: 1.5rem 0 1.5rem;
+}
+
+.list {
+    width: 65rem;
+    column-count: 4;
+}
+
+.list img {
+    width: 100%;
+    margin-bottom: .5rem;
+    border-radius: .25rem;
 }

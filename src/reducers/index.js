@@ -36,9 +36,27 @@ const searchedGifs = (state=[], action) => {
     }
 };
 
+const gifList = (state=[], action) => {
+    switch(action.type) {
+        case 'GET_GIF_LIST':
+            return [...action.payload];
+        default:
+            return state;
+    }
+};
+
 const searchTerm = (state='', action) => {
     switch(action.type) {
         case 'GET_SEARCH_TERM':
+            return action.payload;
+        default:
+            return state;
+    }
+};
+
+const gifTitle = (state='', action) => {
+    switch(action.type) {
+        case 'GET_TITLE':
             return action.payload;
         default:
             return state;
@@ -50,5 +68,7 @@ export default combineReducers({
     artistGifs: artistGifs,
     reactionsGifs: reactionsGifs,
     searchedGifs: searchedGifs,
-    searchTerm: searchTerm
+    gifList: gifList,
+    searchTerm: searchTerm,
+    gifTitle: gifTitle
 });
