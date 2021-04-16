@@ -45,6 +45,15 @@ const gifList = (state=[], action) => {
     }
 };
 
+const stickersList = (state=[], action) => {
+    switch(action.type) {
+        case 'GET_STICKERS_LIST':
+            return [...action.payload];
+        default:
+            return state;
+    }
+};
+
 const trendingStickers = (state=[], action) => {
     switch(action.type) {
         case 'GET_TRENDING_STICKERS':
@@ -63,6 +72,15 @@ const searchTerm = (state='', action) => {
     }
 };
 
+const tagTitle = (state='gifs', action) => {
+    switch(action.type) {
+        case 'UPDATE_TAG_TITLE':
+            return action.payload;
+        default:
+            return state; 
+    }
+}
+
 const gifTitle = (state='', action) => {
     switch(action.type) {
         case 'GET_TITLE':
@@ -79,6 +97,8 @@ export default combineReducers({
     searchedGifs: searchedGifs,
     gifList: gifList,
     trendingStickers: trendingStickers,
+    stickersList: stickersList,
     searchTerm: searchTerm,
-    gifTitle: gifTitle
+    gifTitle: gifTitle,
+    tagTitle: tagTitle
 });

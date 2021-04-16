@@ -42,10 +42,24 @@ export const getTrendingStickers = () => {
     }
 };
 
+export const getStickersList = (searchTerm) => {
+    return async (dispatch) => {
+        const gifList = await axios.get(`https://api.giphy.com/v1/stickers/search?q=${searchTerm}&api_key=ms344CewNH5NEbybHwQifMZImoQfEQ38`);
+        dispatch({ type: 'GET_STICKERS_LIST', payload: gifList.data.data });
+    }
+};
+
 export const updateSearchTerm = (term) => {
     return {
         type: 'GET_SEARCH_TERM',
         payload: term
+    }
+};
+
+export const updateTagTitle = (title) => {
+    return {
+        type: 'UPDATE_TAG_TITLE',
+        payload: title
     }
 };
 

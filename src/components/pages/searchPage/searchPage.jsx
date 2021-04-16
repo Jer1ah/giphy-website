@@ -7,20 +7,16 @@ import Footer from '../../footer/footer';
 import styles from './searchPage.module.css';
 
 class searchPage extends Component {
-    shouldComponentUpdate(nextProps) {
-        if(nextProps.gifList !== this.props.gifList) {
-            return true;
-        } else {
-            return false;
-        }
-    }
+
 
     render() {
+        const gifs = this.props.tagTitle === 'stickers' ? this.props.stickersList : this.props.gifList;
+
         return (
             <div className={styles.searchPage}>
                 <Header />
                 <TagNavigation />
-                <GifList gifList={this.props.gifList}/>
+                <GifList gifList={gifs}/>
                 <Footer />
             </div>
         );
@@ -29,7 +25,9 @@ class searchPage extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        gifList: state.searchedGifs
+        gifList: state.searchedGifs,
+        stickersList: state.stickersList,
+        tagTitle: state.tagTitle
     };
 };
 

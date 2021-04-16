@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { 
     getSearchedGifs,
-    updateSearchTerm
+    updateSearchTerm,
+    getStickersList
 } from '../../actions';
 
 import styles from './searchBar.module.css';
@@ -19,6 +20,7 @@ class searchBar extends Component {
     onSearch = () => {
         this.props.updateSearchTerm(this.searchBar.current.value);
         this.props.getSearchedGifs(this.searchBar.current.value);
+        this.props.getStickersList(this.searchBar.current.value);
         this.searchBar.current.value = '';
     }
 
@@ -40,11 +42,12 @@ class searchBar extends Component {
 const mapStateToProps = (state) => {
     return {
         searchTerm: state.searchTerm,
-        gifList: state.searchedGifs
+        gifList: state.searchedGifs,
     };
 }
 
 export default connect(mapStateToProps, {
     getSearchedGifs,
-    updateSearchTerm
+    updateSearchTerm,
+    getStickersList
 })(searchBar);

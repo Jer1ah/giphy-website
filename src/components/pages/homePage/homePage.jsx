@@ -12,6 +12,8 @@ import ArtistList from '../../artistList/artistList';
 import ReactionsList from '../../reactionsList/reactionsList';
 import Footer from '../../footer/footer';
 
+import styles from './homePage.module.css';
+
 class homePage extends Component {
     componentDidMount() {
         this.props.getTrendingGifs();
@@ -21,7 +23,7 @@ class homePage extends Component {
 
     render() {
         return (
-            <div className="home">
+            <div className={styles.homePage}>
                 <Header />
                 <TrendingList />
                 <ArtistList />
