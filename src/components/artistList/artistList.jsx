@@ -19,6 +19,14 @@ const artistList = (props) => {
             },
             items: 3,
             slidesToSlide: 1
+        },
+
+        tablet: {
+            breakpoint: {
+                max: 825,
+                min: 0
+            },
+            items: 2
         }
     };
 

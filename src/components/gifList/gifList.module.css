@@ -1,5 +1,6 @@
 .gifList {
     width: 65rem;
+    max-width: 100%;
     margin: 0 auto;
     column-count: 4;
 }
@@ -8,4 +9,17 @@
     width: 100%;
     margin-bottom: .5rem;
     border-radius: .25rem;
+}
+
+/*-- media queries --*/
+@media(max-width: 775px) {
+    .gifList {
+        column-count: 3;
+    }
+}
+
+@media(max-width: 625px) {
+    .gifList {
+        column-count: 2;
+    }
 }

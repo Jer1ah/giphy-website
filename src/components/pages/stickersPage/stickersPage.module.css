@@ -1,5 +1,6 @@
 .stickersPage {
     width: 65rem;
+    max-width: 95%;
     margin: 2rem auto 0;
 }
 
@@ -11,6 +12,7 @@
 
 .list {
     column-count: 4;
+    max-width: 100%;
 }
 
 .list img {
@@ -18,4 +20,17 @@
     margin-bottom: .5rem;
     border-radius: .25rem;
     background-color: #222;
+}
+
+/*-- media queries --*/
+@media(max-width: 775px) {
+    .list {
+        column-count: 3;
+    }
+}
+
+@media(max-width: 625px) {
+    .list {
+        column-count: 2;
+    }
 }

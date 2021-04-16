@@ -7,6 +7,11 @@
     height: 2.25rem;
 }
 
+.dropdown {
+    height: 100%;
+    flex: 1;
+}
+
 .mobileNav {
     display: flex;
     flex-direction: row;
@@ -18,18 +23,6 @@
 
 .menuButton {
     display: none;
-}
-
-.dropdown {
-    position: absolute;
-    top: 5.25rem;
-    height: .1rem;
-    width: 65rem;
-    max-width: 95%;
-    background: linear-gradient(-135deg, rgb(74, 144, 226) 0%, rgb(148, 56, 255) 100%);
-    transition: all 1s;
-    transform-origin: top left;
-    z-index: 1250;
 }
 
 .logo {
@@ -153,12 +146,25 @@
 @media(max-width: 1050px) {
     .mobileNav {
         position: absolute;
-        top: 6rem;
-        left: 2.5rem;
+        top: 1rem;
+        left: 1.5rem;
         z-index: 10001;
         flex-direction: column;
         height: 20rem;
         padding: .1rem;
+    }
+
+    .dropdown {
+        position: absolute;
+        top: 5.25rem;
+        height: 22rem;
+        width: 65rem;
+        max-width: 95%;
+        background: linear-gradient(-135deg, rgb(74, 144, 226) 0%, rgb(148, 56, 255) 100%);
+        transition: .5s;
+        transform-origin: top left;
+        z-index: 1250;
+        opacity: 0;
         display: none;
     }
 

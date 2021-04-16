@@ -17,14 +17,35 @@ class Navigation extends Component {
         this.dropdown = React.createRef();
     }
 
+    componentDidMount() {
+        window.addEventListener('resize', () => {
+            if(this.dropdown.current !== null) {
+                if(window.innerWidth > 1050) {
+                    // this.mobileMenu.current.style.display = "flex";
+                    this.dropdown.current.style.display = 'flex';
+                    this.dropdown.current.style.opacity = '1';
+                } else {
+                    // this.mobileMenu.current.style.display = "none";
+                    this.dropdown.current.style.display = 'none';
+                    this.dropdown.current.style.opacity = '0';
+                }
+            }
+        });
+    }
+
     onButtonClick = (event) => {
         this.props.getTitle(event.target.innerHTML);
         this.props.getGifList(event.target.innerHTML);
     }
 
     onMenuButtonClick = () => {
-        this.mobileMenu.current.style.display = "flex";
-        this.dropdown.current.style.transform = 'scaleY(175)';
+        if(this.dropdown.current.style.display === 'none') {
+            this.dropdown.current.style.display = 'flex';
+            this.dropdown.current.style.opacity = '1';
+        } else {
+            this.dropdown.current.style.display = 'none';
+            this.dropdown.current.style.opacity = '0';
+        }
     }
 
     render() {
@@ -34,6 +55,7 @@ class Navigation extends Component {
                     <img src={giphyLogo} alt="Giphy logo"/>
                     <h5>GIPHY</h5>
                 </Link>
+                <div className={styles.dropdown} ref={this.dropdown}>
                 <div className={styles.mobileNav} ref={this.mobileMenu}>
                     <ul className={styles.navigation__list}>
                         <li className={styles.navigation__listItem}>
@@ -68,13 +90,13 @@ class Navigation extends Component {
                         <h5>Log In</h5>
                     </Link>
                 </div>
+                </div>
                 <img 
                     src={menuIcon} 
                     alt="Menu Icon" 
                     className={styles.menuButton}
                     onClick={this.onMenuButtonClick}
                 />
-                <div className={styles.dropdown} ref={this.dropdown}></div>
             </nav>
         );
     }

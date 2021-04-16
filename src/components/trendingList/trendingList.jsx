@@ -19,6 +19,24 @@ const trendingList = (props) => {
             },
             items: 5,
             slidesToSlide: 3
+        },
+
+        tablet: {
+            breakpoint: {
+                max: 900,
+                min: 750
+            },
+            items: 4,
+            slidesToSlide: 2
+        },
+
+        mobile: {
+            breakpoint: {
+                max: 749,
+                min: 0
+            },
+            items: 2,
+            slidesToSlide: 1
         }
     };
 
