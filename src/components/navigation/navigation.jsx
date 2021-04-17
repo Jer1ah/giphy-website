@@ -56,6 +56,7 @@ class Navigation extends Component {
                     <h5>GIPHY</h5>
                 </Link>
                 <div className={styles.dropdown} ref={this.dropdown}>
+                <div className={styles.dropdownAngle}></div>
                 <div className={styles.mobileNav} ref={this.mobileMenu}>
                     <ul className={styles.navigation__list}>
                         <li className={styles.navigation__listItem}>
