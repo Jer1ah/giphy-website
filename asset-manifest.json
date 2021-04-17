@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/giphy-website/static/css/main.136f0350.chunk.css",
+    "main.js": "/giphy-website/static/js/main.17b19f79.chunk.js",
+    "main.js.map": "/giphy-website/static/js/main.17b19f79.chunk.js.map",
+    "runtime-main.js": "/giphy-website/static/js/runtime-main.e4b4f4d8.js",
+    "runtime-main.js.map": "/giphy-website/static/js/runtime-main.e4b4f4d8.js.map",
+    "static/css/2.336181e6.chunk.css": "/giphy-website/static/css/2.336181e6.chunk.css",
+    "static/js/2.2cb1e751.chunk.js": "/giphy-website/static/js/2.2cb1e751.chunk.js",
+    "static/js/2.2cb1e751.chunk.js.map": "/giphy-website/static/js/2.2cb1e751.chunk.js.map",
+    "index.html": "/giphy-website/index.html",
+    "static/css/2.336181e6.chunk.css.map": "/giphy-website/static/css/2.336181e6.chunk.css.map",
+    "static/css/main.136f0350.chunk.css.map": "/giphy-website/static/css/main.136f0350.chunk.css.map",
+    "static/js/2.2cb1e751.chunk.js.LICENSE.txt": "/giphy-website/static/js/2.2cb1e751.chunk.js.LICENSE.txt",
+    "static/media/apple.d6eece6e.svg": "/giphy-website/static/media/apple.d6eece6e.svg",
+    "static/media/facebook.6f04040e.svg": "/giphy-website/static/media/facebook.6f04040e.svg",
+    "static/media/flash.723f7e13.svg": "/giphy-website/static/media/flash.723f7e13.svg",
+    "static/media/giphy-logo.070785b1.png": "/giphy-website/static/media/giphy-logo.070785b1.png",
+    "static/media/menu.594de798.svg": "/giphy-website/static/media/menu.594de798.svg",
+    "static/media/reload.0e231626.svg": "/giphy-website/static/media/reload.0e231626.svg",
+    "static/media/styles.css": "/giphy-website/static/media/revicons.e8746a62.woff",
+    "static/media/search.b8eac1e0.svg": "/giphy-website/static/media/search.b8eac1e0.svg",
+    "static/media/trend.c8e3e49c.svg": "/giphy-website/static/media/trend.c8e3e49c.svg",
+    "static/media/upload.3c41c9b8.svg": "/giphy-website/static/media/upload.3c41c9b8.svg",
+    "static/media/user.b5716a38.svg": "/giphy-website/static/media/user.b5716a38.svg",
+    "static/media/video-player.e58a5c72.svg": "/giphy-website/static/media/video-player.e58a5c72.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e4b4f4d8.js",
+    "static/css/2.336181e6.chunk.css",
+    "static/js/2.2cb1e751.chunk.js",
+    "static/css/main.136f0350.chunk.css",
+    "static/js/main.17b19f79.chunk.js"
+  ]
+}
